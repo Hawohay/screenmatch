@@ -18,7 +18,7 @@ public class Main {
         myMovie.toAssess(8);
         myMovie.toAssess(7);
         myMovie.toAssess(9);
-        System.out.println("Total de avaliações: " + myMovie.getTotalReviews());
+        System.out.println("Total de avaliações teste: " + myMovie.getTotalReviews());
         System.out.println(myMovie.averageRating());
 
 
