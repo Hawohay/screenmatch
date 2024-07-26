@@ -1,8 +1,8 @@
 package br.com.projetos.screenmatch.models;
 
-import br.com.projetos.screenmatch.calculations.Classificacao;
+import br.com.projetos.screenmatch.calculations.Classificavel;
 
-public class Episode implements Classificacao {
+public class Episode implements Classificavel {
     private int number;
     private String name;
     private Serie serie;

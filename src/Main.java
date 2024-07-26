@@ -45,13 +45,15 @@ public class Main {
         System.out.println(timeCalculator.getTotalTime());
 
         RecommendationFilter filter = new RecommendationFilter();
-        filter.filter(myMovie);
+        filter.toFilter(myMovie);
+
+        System.out.println();
 
         Episode episode = new Episode();
         episode.setNumber(1);
         episode.setSerie(lost);
         episode.setTotalViewers(300);
-        filter.filter(episode);
+        filter.toFilter(episode);
 
     }
 }

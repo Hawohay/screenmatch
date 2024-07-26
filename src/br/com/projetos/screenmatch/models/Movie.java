@@ -1,8 +1,7 @@
 package br.com.projetos.screenmatch.models;
+import br.com.projetos.screenmatch.calculations.Classificavel;
 
-import br.com.projetos.screenmatch.calculations.Classificacao;
-
-public class Movie extends Title implements Classificacao {
+public class Movie extends Title implements Classificavel {
     private  String manager;
 
     public String getManager() {
