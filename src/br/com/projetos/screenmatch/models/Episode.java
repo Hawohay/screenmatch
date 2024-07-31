@@ -41,7 +41,7 @@ public class Episode implements Classificavel {
     }
 
     @Override
-    public int getClassificacao() {
+    public int getClassification() {
         if (totalViewers > 100) {
             return 4;
         } else {
