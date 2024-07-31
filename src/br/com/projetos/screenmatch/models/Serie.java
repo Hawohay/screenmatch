@@ -1,11 +1,15 @@
 package br.com.projetos.screenmatch.models;
 
-public class Serie extends Title{
+public class Serie extends Title {
 
     private int season;
     private boolean active;
     private int episodesPerSeason;
     private int minutesPerEpisode;
+
+    public Serie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
 
     public int getSeason() {
         return season;

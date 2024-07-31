@@ -9,19 +9,24 @@ public class Title {
     private double addReviews;
     private int totalReviews;
 
-    public void displayDatasheet(){
+    public Title(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
+
+    public void displayDatasheet() {
         System.out.println("Film's name: " + name);
         System.out.println("Release year: " + releaseYear);
         System.out.println("Duration in minutes: " + durationInMinutes);
         System.out.println("Include in plan: " + includedInThePlan);
     }
 
-    public void toAssess(double grade){
+    public void toAssess(double grade) {
         addReviews += grade;
         totalReviews++;
     }
 
-    public double averageRating(){
+    public double averageRating() {
         return addReviews / totalReviews;
     }
 
@@ -57,7 +62,7 @@ public class Title {
         this.durationInMinutes = durationInMinutes;
     }
 
-    public int getTotalReviews(){
+    public int getTotalReviews() {
         return totalReviews;
     }
 }
