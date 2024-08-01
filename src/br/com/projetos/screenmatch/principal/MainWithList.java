@@ -3,6 +3,8 @@ import br.com.projetos.screenmatch.models.Movie;
 import br.com.projetos.screenmatch.models.Title;
 import br.com.projetos.screenmatch.models.Serie;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainWithList {
     public static void main(String[] args) {
@@ -28,5 +30,38 @@ public class MainWithList {
                 System.out.println("Classification: " + movie.getClassification());
             }
         }
+
+        ArrayList<String> searchForActor = new ArrayList<>();
+        searchForActor.add("Adam Sandler");
+        searchForActor.add("Paulo");
+        searchForActor.add("Luíza");
+        searchForActor.add("Bruna");
+        searchForActor.add("Aline");
+
+        System.out.println("Lista desordenada: ");
+        System.out.println(searchForActor);
+        System.out.println();
+        Collections.sort(searchForActor);
+        System.out.println("Lista ordenada: ");
+        System.out.println(searchForActor);
+        System.out.println();
+        Collections.sort(listWatched);
+        System.out.println("Lista de títulos ordenados por ordem alfabética: " + listWatched);
+        System.out.println();
+
+        listWatched.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println("Lista de títulos ordenados por ano de lançamento: " + listWatched);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

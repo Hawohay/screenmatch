@@ -50,6 +50,6 @@ public class Serie extends Title {
 
     @Override
     public String toString() {
-        return "Movie: " + this.getName() + " (" + this.getReleaseYear() + ")";
+        return "Serie: " + this.getName() + " (" + this.getReleaseYear() + ")";
     }
 }
