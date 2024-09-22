@@ -1,4 +1,4 @@
-package br.com.projetos.screenmatch.principal;
+package br.com.projetos.screenmatch.main;
 import br.com.projetos.screenmatch.calculations.RecommendationFilter;
 import br.com.projetos.screenmatch.calculations.TimeCalculator;
 import br.com.projetos.screenmatch.models.Episode;

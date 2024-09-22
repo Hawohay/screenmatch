@@ -1,4 +1,4 @@
-package br.com.projetos.screenmatch.principal;
+package br.com.projetos.screenmatch.main;
 import br.com.projetos.screenmatch.models.Movie;
 import br.com.projetos.screenmatch.models.Title;
 import br.com.projetos.screenmatch.models.Serie;
