@@ -3,9 +3,9 @@ package br.com.projetos.screenmatch.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
-    @SerializedName("Title")
+
     private String name;
-    @SerializedName("Year")
+
     private int releaseYear;
     private int durationInMinutes;
     private boolean includedInThePlan;
@@ -15,6 +15,17 @@ public class Title implements Comparable<Title> {
     public Title(String name, int releaseYear) {
         this.name = name;
         this.releaseYear = releaseYear;
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+
+        if(myTitleOmdb.year().length() > 4){
+            throw new ConversionYearErrorException("Não consegui converter o ano de lançamento " +
+                    "porque tem mais de 4 caracteres.");
+        }
+        this.releaseYear = Integer.valueOf(myTitleOmdb.year());
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0, 3));
     }
 
     public void displayDatasheet() {
@@ -79,7 +90,8 @@ public class Title implements Comparable<Title> {
     public String toString() {
         return "Title{" +
                 "name='" + name + '\'' +
-                ", releaseYear=" + releaseYear +
+                ", releaseYear=" + releaseYear + '\'' +
+                ", durationsInMinutes=" + durationInMinutes +
                 '}';
     }
 }
